@@ -1,0 +1,49 @@
+
+<% layout("/layouts/boilarplate") %>
+
+   <div class="row">
+  <div class="col-8 offset-2">
+    <h3 class="mb-4">Edit The Form</h3>
+
+    <form method="post" action="/library/<%= listings._id %>?_method=PUT" enctype="multipart/form-data">
+      
+    
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="list[title]" value="<%= listings.title %>" type="text" class="form-control">
+      </div>
+
+     
+      <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+        <input name="list[author]" value="<%= listings.author %>" type="text" class="form-control">
+      </div>
+
+      
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="list[description]" class="form-control"><%= listings.description %></textarea>
+      </div>
+
+      
+      <div class="mb-3">
+        <label class="form-label">Current Image</label><br>
+        <img src="<%= listings.image.url %>" alt="<%= listings.title %>" style="height: 150px; border-radius: 0.5rem;">
+      </div>
+
+ 
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload New Image (optional)</label>
+        <input name="list[image]" type="file" class="form-control">
+      </div>
+
+   
+      <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input name="list[year]" value="<%= listings.year %>" type="number" class="form-control">
+      </div>
+
+      <button class="btn btn-dark">Update</button>
+    </form>
+  </div>
+</div>

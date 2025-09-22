@@ -1,0 +1,35 @@
+<% layout("/layouts/boilarplate") %>
+
+     
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h3>Add new Book</h3>
+             <form method="post" action="/library/new" enctype="multipart/form-data">
+         <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="list[title]" placeholder="enter title" type="text" class="form-control">
+        </div>
+           <div class="mb-3">
+        <label for="title" class="form-label">Author</label>
+        <input name="list[author]" placeholder="enter author" type="text" class="form-control">
+        </div>  
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="list[description]" placeholder="enter title" class="form-control" > </textarea>
+        </div>
+        <div class="mb-3">
+        <label for="image" class="form-label">Upload  image</label>
+        <input name="list[image]" placeholder="choose image" type="file" class="form-control" >
+        </div>
+        <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input name="list[year]" placeholder="enter year" class="form-control">
+        </div>
+        <div class="mb-3">
+        
+        <button class="btn btn-dark">Add</button>
+    </form>
+
+            </div>
+        </div>
+   

@@ -1,0 +1,67 @@
+
+<style>
+  /* Navbar background & shadow */
+  .navbar {
+    background: #ffffff; /* white background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
+  }
+
+  /* Brand styling */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* bootstrap blue */
+    transition: color 0.3s;
+  }
+  .navbar-brand:hover {
+    color: #0056b3; /* darker blue on hover */
+  }
+
+  /* Nav links */
+  .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  .nav-link:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+
+  /* Active link */
+  .nav-link.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+
+  /* Toggler icon visible on small screens */
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+</style>
+
+<nav class="navbar navbar-expand-md sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/manage">
+      <i class="fa-solid fa-book-open me-2"></i>Library
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/library">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary ms-3" href="/library/new">Add new books</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
